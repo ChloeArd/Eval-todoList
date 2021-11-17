@@ -10,6 +10,7 @@ export const EditButton = function (parent, idName, table) {
             let x = this.id;
             let recupId = x.replace("edit", "");
 
+            // Check if the list is already checked
             if (document.getElementById("valueList" + recupId).style.textDecoration !== "line-through") {
                 let valueList = document.getElementById("valueList" + recupId);
                 valueList.innerHTML = "";
