@@ -1,4 +1,5 @@
-import {List, list} from "./List";
+import {List, tableList} from "./List";
+import {ClearButton} from "./ClearButton";
 
 export const TodoItem = function () {
     // create a container of a to do list
@@ -27,7 +28,14 @@ export const TodoItem = function () {
     input2.value = "Add Item";
     divInput.appendChild(input2);
 
-    List(containerDiv);
+    tableList;
+
+    let containerList = document.createElement("div");
+    containerList.id = "containerList";
+    containerDiv.appendChild(containerList);
+    List(containerList);
+
+    ClearButton(containerDiv);
 
 
 
