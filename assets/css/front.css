@@ -60,6 +60,10 @@ input {
     border-left: 0;
 }
 
+#input2:hover {
+    background-color: #cccccc;
+}
+
 .fa-check-circle {
     color: #95d6b7;
 }
@@ -96,4 +100,27 @@ input {
 #clear {
     border-radius: 5px;
     margin: auto;
+}
+
+.inputEdit {
+    border: none;
+    background-color: #f5f5f5;
+    color: gray;
+    width: 80%;
+    border-bottom: 1px solid #333333;
+    font-size: 25px;
+}
+
+.cancel, .ok {
+    border: none;
+    background-color: #dc5350;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 8%;
+    margin: 10px;
+}
+
+.ok {
+    background-color: #95d6b7;
 }
