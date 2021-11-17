@@ -5,6 +5,7 @@ export const CheckButton = function (parent, idName, table) {
     checkButton.innerHTML = "<i class=\"far fa-check-circle\"></i>";
     parent.appendChild(checkButton);
 
+    // Retrieve the id of the element that is checked, for the crossed out
     for (let i = 0; i < table.length; i++) {
         document.getElementById("check" + i).addEventListener("click", function () {
             let x = this.id;
