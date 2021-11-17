@@ -60,8 +60,8 @@ input {
     border-left: 0;
 }
 
-#input2:hover {
-    background-color: #cccccc;
+#input2:hover, #clear:hover {
+    background-color: #e0e0e0;
 }
 
 .fa-check-circle {
@@ -79,6 +79,10 @@ input {
 .far {
     font-size: 15px;
     margin: 0 10px;
+}
+
+.far {
+    font-weight: bold;
 }
 
 .list {
@@ -123,4 +127,12 @@ input {
 
 .ok {
     background-color: #95d6b7;
+}
+
+.cancel:hover {
+    background-color: #c73431;
+}
+
+.ok:hover {
+    background-color: #70c29b;
 }
