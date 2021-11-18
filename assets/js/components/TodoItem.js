@@ -32,7 +32,6 @@ export const TodoItem = function () {
         divInput.appendChild(input2);
 
         tableList;
-        localStorage.delete = 0;
 
         let containerList = document.createElement("div");
         containerList.id = "containerList";

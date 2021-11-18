@@ -106,6 +106,6 @@ function prodConfig() {
 
         plugins: [
             new MiniCssExtractPlugin({ filename: "build/css/[name].css", })
-        ],
+        ]
     }
 }

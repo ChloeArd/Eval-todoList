@@ -1,6 +1,8 @@
 import '@fortawesome/fontawesome-free/js/all.js';
 import {tableList} from "./List";
 
+localStorage.delete = 0;
+
 export const Button = function (parent, idName1, idName2, idName3, table, i) {
     this.parent = parent;
     this.idName1 = idName1;
