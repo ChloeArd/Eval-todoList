@@ -29,6 +29,7 @@ document.getElementById("buttonUpdate").addEventListener("click", function () {
     dataDelete = localStorage.delete;
 
     const ctx = document.getElementById('myChart').getContext('2d');
+
     const chart = new Chart(ctx, {
         type: 'bar',
         data: {
