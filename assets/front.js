@@ -1,18 +1,32 @@
 import "./css/front.css";
 import {TodoItem} from "./js/components/TodoItem";
-import {Chart} from "chart.js/auto";
+import {Chart} from "chart.js";
 import {getRelativePosition} from "chart.js/helpers";
 
-TodoItem();
+const todo = new TodoItem();
+todo.todo();
+
+let para = document.createElement("p");
+para.innerHTML = "Nombre d'éléments supprimés : " + localStorage.delete;
+para.style.width = "100%";
+para.style.textAlign = "center";
+para.style.fontSize = "20px";
+para.id = "numberDelete";
+document.body.append(para);
+
+let canva = document.createElement("canvas");
+canva.id = "myChart";
+document.body.append(canva);
+
 
 const ctx = document.getElementById('myChart').getContext('2d');
 const chart = new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     data: {
-        labels: ["bonjour", "BONSOIR"],
+        labels: "Supprimé",
         datasets: [{
             label: 'Nombre d\'éléments ayant été supprimés de la TODO List',
-            data: [2, 8],
+            data: localStorage.delete,
             backgroundColor: [
                 'rgba(149, 214, 183, 0.2)'
             ],

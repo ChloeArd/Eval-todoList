@@ -1,46 +1,41 @@
-import {CheckButton} from "./CheckButton";
-import {EditButton} from "./EditButton";
-import {DeleteButton} from "./DeleteButton";
+import {Button} from "./Button";
 
 export let tableList = [];
 
 export const List = function (parent) {
-    document.getElementById("input2").addEventListener("click", function () {
-        // get the value of the input
-        let input1 = document.getElementById("input1").value;
-        let x = tableList.length;
 
-        //let table = JSON.parse(localStorage.getItem("table", tableList));
+    this.parent = parent;
 
-        if (input1 !== "") {
-            tableList.push(input1);
-            console.log(tableList);
-            localStorage.setItem("table", JSON.stringify(tableList));
-            var tableLocalStorage = JSON.parse(localStorage.getItem("table"));
-            console.log("local : " + tableLocalStorage);
+    this.list = function () {
+        document.getElementById("input2").addEventListener("click", function () {
+            // get the value of the input
+            let input1 = document.getElementById("input1").value.trim();
+            let x = tableList.length;
 
-            // create a list
-            let div = document.createElement("div");
-            div.id = "list" + x;
-            div.classList = "list";
-            parent.prepend(div);
+            if (input1 !== "") {
+                tableList.push(input1);
+                localStorage.setItem("table", JSON.stringify(tableList));
+                let tableLocalStorage = JSON.parse(localStorage.getItem("table"));
 
-            let valueInput = document.createElement("div");
-            valueInput.id = "valueList" + x;
-            valueInput.classList = "valueList";
-            valueInput.innerHTML = input1;
-            div.prepend(valueInput);
+                // create a list
+                let div = document.createElement("div");
+                div.id = "list" + x;
+                div.classList = "list";
+                parent.prepend(div);
 
-            CheckButton(div, "check" + x, tableList);
-            EditButton(div, "edit" + x, tableList);
-            DeleteButton(div, "delete" + x, tableList);
+                let valueInput = document.createElement("div");
+                valueInput.id = "valueList" + x;
+                valueInput.classList = "valueList";
+                valueInput.innerHTML = input1;
+                div.prepend(valueInput);
 
-            document.getElementById("input1").value = "";
+                const button = new Button(div, "check" + x, "edit" + x, "delete" + x, tableList, x);
+                button.checkButton();
+                button.editButton();
+                button.deleteButton();
 
-        }
-
-    });
-
-
-    //const checkButton = new CheckButton();
+                document.getElementById("input1").value = "";
+            }
+        });
+    }
 }

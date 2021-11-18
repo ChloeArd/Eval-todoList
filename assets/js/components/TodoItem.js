@@ -1,45 +1,47 @@
 import {List, tableList} from "./List";
-import {ClearButton} from "./ClearButton";
+import {Button} from "./Button";
 
 export const TodoItem = function () {
-    // create a container of a to do list
-    let containerDiv = document.createElement("div");
-    containerDiv.classList = "containerDiv";
-    document.body.appendChild(containerDiv);
 
-    // create a title
-    let h1 = document.createElement("h1");
-    h1.innerHTML = "To Do List";
-    containerDiv.appendChild(h1);
+    this.todo = function () {
+        // create a container of a to do list
+        let containerDiv = document.createElement("div");
+        containerDiv.classList = "containerDiv";
+        document.body.appendChild(containerDiv);
 
-    let divInput = document.createElement("div");
-    divInput.id = "containerInput";
-    containerDiv.appendChild(divInput);
+        // create a title
+        let h1 = document.createElement("h1");
+        h1.innerHTML = "To Do List";
+        containerDiv.appendChild(h1);
 
-    let input1 = document.createElement("input");
-    input1.id = "input1";
-    input1.type = "text";
-    input1.placeholder = "Name...";
-    input1.maxLength = "80";
-    divInput.appendChild(input1);
+        let divInput = document.createElement("div");
+        divInput.id = "containerInput";
+        containerDiv.appendChild(divInput);
 
-    let input2 = document.createElement("input");
-    input2.id = "input2";
-    input2.type = "submit";
-    input2.value = "Add Item";
-    divInput.appendChild(input2);
+        let input1 = document.createElement("input");
+        input1.id = "input1";
+        input1.type = "text";
+        input1.placeholder = "Name...";
+        input1.maxLength = "80";
+        divInput.appendChild(input1);
 
-    tableList;
+        let input2 = document.createElement("input");
+        input2.id = "input2";
+        input2.type = "submit";
+        input2.value = "Add Item";
+        divInput.appendChild(input2);
 
-    let containerList = document.createElement("div");
-    containerList.id = "containerList";
-    containerDiv.appendChild(containerList);
-    List(containerList);
+        tableList;
+        localStorage.delete = 0;
 
-    ClearButton(containerDiv);
+        let containerList = document.createElement("div");
+        containerList.id = "containerList";
+        containerDiv.appendChild(containerList);
 
+        const list = new List(containerList);
+        list.list();
 
-
-
-    //const checkButton = new CheckButton();
+        const button = new Button(containerDiv, "", "", "", "", "");
+        button.clearButton()
+    }
 }
