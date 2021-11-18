@@ -1,3 +1,4 @@
+import '@fortawesome/fontawesome-free/js/all.js';
 
 export const EditButton = function (parent, idName, table) {
     let editButton = document.createElement("span");

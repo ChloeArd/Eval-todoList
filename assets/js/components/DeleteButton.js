@@ -1,3 +1,4 @@
+import '@fortawesome/fontawesome-free/js/all.js';
 
 export const DeleteButton = function (parent, idName, table) {
     // create a delete button
@@ -6,7 +7,9 @@ export const DeleteButton = function (parent, idName, table) {
     deleteButton.innerHTML = "<i class=\"far fa-times-circle\"></i>";
     parent.appendChild(deleteButton);
 
-    sessionStorage.delete = 0;
+    let deleteList = 0;
+    const storage = window.localStorage;
+    storage.setItem("delete", deleteList);
 
     for (let i = 0; i < table.length; i++) {
         document.getElementById("delete" + i).addEventListener("click", function () {
@@ -17,7 +20,13 @@ export const DeleteButton = function (parent, idName, table) {
             // delete a list of table
             table.splice(parseInt(recupId), parseInt(recupId + 1));
             // Stores the number of lists that have been deleted
-            sessionStorage.delete++;
+            parseInt(deleteList++);
+            console.log("deleteList : " + deleteList);
+
+            storage.setItem("delete", deleteList);
+
+            let value = storage.getItem("delete");
+            console.log(value);
         });
     }
 

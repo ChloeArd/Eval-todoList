@@ -1,3 +1,4 @@
+import '@fortawesome/fontawesome-free/js/all.js';
 
 export const CheckButton = function (parent, idName, table) {
     let checkButton = document.createElement("span");

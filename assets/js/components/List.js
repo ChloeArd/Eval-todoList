@@ -10,9 +10,14 @@ export const List = function (parent) {
         let input1 = document.getElementById("input1").value;
         let x = tableList.length;
 
+        //let table = JSON.parse(localStorage.getItem("table", tableList));
+
         if (input1 !== "") {
             tableList.push(input1);
             console.log(tableList);
+            localStorage.setItem("table", JSON.stringify(tableList));
+            var tableLocalStorage = JSON.parse(localStorage.getItem("table"));
+            console.log("local : " + tableLocalStorage);
 
             // create a list
             let div = document.createElement("div");
@@ -31,6 +36,7 @@ export const List = function (parent) {
             DeleteButton(div, "delete" + x, tableList);
 
             document.getElementById("input1").value = "";
+
         }
 
     });

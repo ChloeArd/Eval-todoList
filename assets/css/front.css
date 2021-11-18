@@ -76,13 +76,16 @@ input {
     color: #dc5350;
 }
 
-.far {
-    font-size: 15px;
+svg {
     margin: 0 10px;
 }
 
-.far {
-    font-weight: bold;
+.svg-inline--fa {
+    font-size: 15px;
+}
+
+svg:hover {
+    color: #333333;
 }
 
 .list {

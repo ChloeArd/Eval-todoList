@@ -20,6 +20,7 @@ export const TodoItem = function () {
     input1.id = "input1";
     input1.type = "text";
     input1.placeholder = "Name...";
+    input1.maxLength = "80";
     divInput.appendChild(input1);
 
     let input2 = document.createElement("input");
