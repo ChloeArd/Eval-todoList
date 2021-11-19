@@ -8,9 +8,6 @@ todo.todo();
 
 let para = document.createElement("p");
 para.innerHTML = "Nombre d'éléments supprimés : " + localStorage.delete;
-para.style.width = "100%";
-para.style.textAlign = "center";
-para.style.fontSize = "20px";
 para.id = "numberDelete";
 document.body.append(para);
 

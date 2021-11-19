@@ -156,3 +156,48 @@ svg:hover {
     width: 50%;
     margin: auto;
 }
+
+#numberDelete {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: gray;
+}
+
+.divEdit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1690px) {
+    .inputEdit {
+        width: 70%;
+    }
+    .cancel, .ok {
+        width: initial;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    #input2 {
+        width: initial;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .inputEdit {
+        width: 100%;
+    }
+    .list {
+        flex-direction: column;
+    }
+    .divEdit {
+        margin: 10px;
+    }
+    .containerDiv {
+        width: 100%;
+        margin-top: 0;
+    }
+}

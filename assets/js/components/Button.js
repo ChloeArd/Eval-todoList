@@ -45,7 +45,7 @@ export const Button = function (parent, idName1, idName2, idName3, table, i) {
                 inputEdit.value = table[recupId];
                 inputEdit.classList = "inputEdit";
                 inputEdit.id = "inputEdit" + recupId;
-                inputEdit.maxLength = "80";
+                inputEdit.maxLength = "40";
                 valueList.appendChild(inputEdit);
 
                 // button ok for edit

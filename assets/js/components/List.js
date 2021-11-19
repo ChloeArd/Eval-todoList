@@ -29,7 +29,11 @@ export const List = function (parent) {
                 valueInput.innerHTML = input1;
                 div.prepend(valueInput);
 
-                const button = new Button(div, "check" + x, "edit" + x, "delete" + x, tableList, x);
+                let divEdit = document.createElement("div");
+                divEdit.classList = "divEdit";
+                div.append(divEdit);
+
+                const button = new Button(divEdit, "check" + x, "edit" + x, "delete" + x, tableList, x);
                 button.checkButton();
                 button.editButton();
                 button.deleteButton();
