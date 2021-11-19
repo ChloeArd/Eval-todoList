@@ -55,6 +55,6 @@ document.getElementById("buttonUpdate").addEventListener("click", function () {
             }
         }
     });
-})
+});
 
 
