@@ -1,4 +1,4 @@
-import '@fortawesome/fontawesome-free/js/all.js';
+import '/@fortawesome/fontawesome-free/js/all.js';
 import {tableList} from "./List.mjs";
 
 localStorage.delete = 0;

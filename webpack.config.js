@@ -91,8 +91,8 @@ function prodConfig() {
                 {
                     test: /\.(m)js$/,
                     loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env'],
+                  options: {
+                          presets: ['@babel/preset-env'],
                         plugins: ['@babel/plugin-proposal-object-rest-spread'],
                         exclude: ['/assets/specs']
                     }
@@ -106,7 +106,7 @@ function prodConfig() {
         },
 
         plugins: [
-            new MiniCssExtractPlugin({ filename: "build/css/[name].css", })
+            new MiniCssExtractPlugin({filename: "build/css/[name].css"})
         ]
     }
 }

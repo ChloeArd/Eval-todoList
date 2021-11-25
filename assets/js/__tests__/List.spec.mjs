@@ -1,6 +1,4 @@
 import {List} from "../components/List.mjs";
-import '../../../@fortawesome/fontawesome-free/js/all.js';
-
 
 describe("Test de la méthode List", function () {
 
@@ -10,8 +8,14 @@ describe("Test de la méthode List", function () {
         list.parent = document.getElementById("containerList");
     })
 
-    it('Vérifiacation du parent de la fonction', function () {
+    it('Vérification du parent de la fonction', function () {
         const parent = document.getElementById("containerList");
         expect(list.parent).toBe(parent);
     });
-})
+});
+
+/*describe("Test de la méthode List", function () {
+    it("test", function () {
+        expect(true).toBe(true);
+    })
+});*/
