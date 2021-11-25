@@ -1,5 +1,5 @@
-import {List, tableList} from "./List";
-import {Button} from "./Button";
+import {List, tableList} from "./List.mjs";
+import {Button} from "./Button.mjs";
 
 export const TodoItem = function () {
 
@@ -36,6 +36,8 @@ export const TodoItem = function () {
         let containerList = document.createElement("div");
         containerList.id = "containerList";
         containerDiv.appendChild(containerList);
+
+        console.log(containerList);
 
         const list = new List(containerList);
         list.list();

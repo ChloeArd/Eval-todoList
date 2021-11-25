@@ -1,5 +1,5 @@
 import "./css/front.css";
-import {TodoItem} from "./js/components/TodoItem";
+import {TodoItem} from "./js/components/TodoItem.mjs";
 import Chart from "chart.js/auto";
 import {getRelativePosition} from "chart.js/helpers";
 
